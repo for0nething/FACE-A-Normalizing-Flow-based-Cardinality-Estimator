@@ -39,8 +39,8 @@ you can use the notebook files under `train` and `evaluate` directories to condu
 
 
 **Notes:** 
-- Before running the codes, make sure the variables related to data paths in the codes are set properly. 
-We have added some comments to hint before some such variables, but may not have covered all of them.
+- Before running the codes, make sure the path variable `PROJECT_PATH` is set properly. 
+This variable should be set as the path of the project root directory.
 - Current codes may be incompatible with machines that do not have GPUs.
 - For GPUs with memory less than 2080Ti (11GB),
  some parameters need to be set smaller, which will bring some performance loss.

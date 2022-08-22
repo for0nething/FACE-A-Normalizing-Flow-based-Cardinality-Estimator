@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # In[1]:
-
+PROJECT_PATH = '/home/jiayi/disk/FACE-release/'
 
 import numpy as np
 import pandas as pd
@@ -27,7 +27,7 @@ COLS = {
 
 
 def LoadTable(dataset_name):
-    data_PATH = '/home/jiayi/disk/gits/Jupyters/FACE-June-Release/data/'
+    data_PATH = PROJECT_PATH + 'data/'
     path = os.path.join(data_PATH, '{}.npy'.format(dataset_name))
     data = np.load(path).astype(np.float32)
     cols = COLS[dataset_name]
@@ -94,8 +94,8 @@ def FillInUnqueriedColumns(table, columns, operators, vals):
 def LoadOracleCardinalities(dataset_name, querySeed=1234):
     
     ORACLE_CARD_FILES = {
-        'power': '/home/jiayi/flow/datasets/oracles/{}_rng-{}.csv'.format(dataset_name, querySeed),
-        'BJAQ': '/home/jiayi/flow/datasets/oracles/{}_rng-{}.csv'.format(dataset_name, querySeed),
+        'power': PROJECT_PATH + 'evaluate/oracle/{}_rng-{}.csv'.format(dataset_name, querySeed),
+        'BJAQ': PROJECT_PATH + 'evaluate/oracle/{}_rng-{}.csv'.format(dataset_name, querySeed),
     }
 
     path = ORACLE_CARD_FILES.get(dataset_name, None)
@@ -322,32 +322,9 @@ class DataWrapper():
         
         """ Change it to your own path """
         print("Save oracle results to :")
-        print('/home/jiayi/flow/datasets/oracles/{}_rng-{}.csv'.format(self.dataset_name, querySeed))
-        df.to_csv('/home/jiayi/flow/datasets/oracles/{}_rng-{}.csv'.format(self.dataset_name, querySeed),
-                 index=False)
+        print(PROJECT_PATH + 'evaluate/oracle/{}_rng-{}.csv'.format(self.dataset_name, querySeed))
+        df.to_csv(PROJECT_PATH + 'evaluate/oracle/{}_rng-{}.csv'.format(self.dataset_name, querySeed),
+                  index=False)
         return
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
 
 
