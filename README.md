@@ -25,12 +25,12 @@ Our codes are built based on [nflows](https://pypi.org/project/nflows/) and [tor
 
 
 # Quick Start
-The real-world datasets can be downloaded from [dataset link](https://cloud.tsinghua.edu.cn/d/a9f1323645a24bc5b987/).
+The real-world datasets can be downloaded from [dataset link](https://drive.google.com/drive/folders/16b-yaSYK6l6ZclLkP6rIxxUyye5Iockm?usp=sharing).
 We use power and BJAQ as concrete examples to illustrate how to use FACE for cardinality estimation.
 - **Step 1:** Build conda environment with `conda env create -f environment.yml`.
 - **Step 2:** Switch to the installed environment by `conda activate testenv`.
 - **Step 3:** Install modified torchquad by `cd ./torchquadMy`, and then `pip install .` .
-- **Step 4:** Download the datasets from [dataset link](https://cloud.tsinghua.edu.cn/d/a9f1323645a24bc5b987/), and then place the data into `data` directory.
+- **Step 4:** Download the datasets from [dataset link](https://drive.google.com/drive/folders/16b-yaSYK6l6ZclLkP6rIxxUyye5Iockm?usp=sharing), and then place the data into `data` directory.
 - **Step 5:** After properly setting the paths of datasets, models, etc, 
 you can use the notebook files under `train` and `evaluate` directories to conduct experiments.
 
